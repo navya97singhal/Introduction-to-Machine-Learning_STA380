@@ -1,0 +1,68 @@
+---
+title: "STA 380 Exercise"
+author: "Shirley Liu"
+date: "2024-08-05"
+output: pdf_document
+---
+
+# Probability practice
+
+### Part A
+
+Visitors to your website are asked to answer a single survey question before they get access to the content on the page. Among all of the users, there are two categories: Random Clicker (RC), and Truthful Clicker (TC). There are two possible answers to the survey: yes and no. Random clickers would click either one with equal probability. You are also giving the information that the expected fraction of random clickers is 0.3. After a trial period, you get the following survey results: 65% said Yes and 35% said No. What fraction of people who are truthful clickers answered yes? Hint: use the rule of total probability.
+
+$$
+\begin{align*}
+P(\text{RC}) &= 0.3 \\
+P(\text{TC}) &= 0.7 \\
+P(\text{Yes} \mid \text{RC}) &= 0.5 \\
+P(\text{No} \mid \text{RC}) &= 0.5 \\
+P(\text{Yes}) &= 0.65 \\
+P(\text{No}) &= 0.35 \\
+P(\text{Yes}) &= P(\text{Yes} \mid \text{RC}) \cdot P(\text{RC}) + P(\text{Yes} \mid \text{TC}) \cdot P(\text{TC}) \\
+0.65 &= 0.5 \cdot 0.3 + P(\text{Yes} \mid \text{TC}) \cdot 0.7 \\
+P(\text{Yes} \mid \text{TC}) &= \frac{0.65 - 0.5 \cdot 0.3}{0.7}
+\end{align*}
+$$
+
+$$
+\begin{aligned}
+P(\text{RC}) &= 0.3 \\
+P(\text{TC}) &= 0.7 \\
+P(\text{Yes} \mid \text{RC}) &= 0.5 \\
+P(\text{No} \mid \text{RC}) &= 0.5 \\
+P(\text{Yes}) &= 0.65 \\
+P(\text{No}) &= 0.35\\
+P(\text{Yes} \mid \text{TC}) &= \frac{0.65 - 0.5 \cdot 0.3}{0.7} \\
+&= \frac{0.50}{0.7} \approx 0.7143
+\end{aligned}
+$$
+
+```{r P_Yes_given_TC}
+P_Yes_given_TC = (0.65 - 0.5*0.3)/0.7
+P_Yes_given_TC 
+```
+
+### Part B. Imagine a medical test for a disease with the following two attributes:
+
+The sensitivity is about 0.993. That is, if someone has the disease, there is a probability of 0.993 that they will test positive. The specificity is about 0.9999. This means that if someone doesn't have the disease, there is probability of 0.9999 that they will test negative. In the general population, incidence of the disease is reasonably rare: about 0.0025% of all people have it (or 0.000025 as a decimal probability). Suppose someone tests positive. What is the probability that they have the disease?
+
+```{r}
+
+```
+
+$$
+\begin{align*}
+P(\text{testPos} \mid \text{HaveDis}) &= 0.993 \\
+P(\text{testNeg} \mid \text{NoDis}) &= 0.9999 \\
+P(\text{HaveDis}) &= 0.000025 \\
+P(\text{NoDis}) &= 1 - P(\text{HaveDis}) = 1 - 0.000025 = 0.999975 \\
+\\
+P(\text{testPos}) &= P(\text{testPos} \mid \text{HaveDis}) \cdot P(\text{HaveDis}) + P(\text{testPos} \mid \text{NoDis}) \cdot P(\text{NoDis}) \\
+P(\text{testPos}) &= 0.993 \cdot 0.000025 + (1 - 0.9999) \cdot (1 - 0.000025) \\
+P(\text{testPos}) &= 0.000024825 + 0.0000999975 = 0.0001248225 \\
+\\
+P(\text{HaveDis} \mid \text{testPos}) &= \frac{P(\text{testPos} \mid \text{HaveDis}) \cdot P(\text{HaveDis})}{P(\text{testPos})} \\
+P(\text{HaveDis} \mid \text{testPos}) &= \frac{0.993 \cdot 0.000025}{0.0001248225} = \frac{0.000024825}{0.0001248225} \approx 0.199
+\end{align*}
+$$
