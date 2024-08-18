@@ -1,5 +1,5 @@
 # STA 380 HW
-By: Shirley Liu, Marcus Martinez, Areeba Shah, Navya Singhal, 
+By: Shirley Liu, Marcus Martinez, Areeba Shah, Navya Singhal
 
 
 ## Installation
