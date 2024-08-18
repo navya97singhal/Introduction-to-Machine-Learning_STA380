@@ -9,7 +9,7 @@ git clone https://github.com/navya97singhal/Introduction-to-Machine-Learning_STA
 ```
 
 ## HW Solutions
-1. [Q1: Probability Practice](https://github.com/navya97singhal/Introduction-to-Machine-Learning_STA380/blob/main/Q1%20Probability%20Practice.ipynb)
+1. Q1: [Probability Practice](https://github.com/navya97singhal/Introduction-to-Machine-Learning_STA380/blob/main/Q1%20Probability%20Practice.ipynb)
 2. [Q2: Wrangling the Billboard Top 100](https://github.com/navya97singhal/Introduction-to-Machine-Learning_STA380/blob/main/Q2%20Billboard%20Top.ipynb)
 3. Q3: 
    - [Visual Story (Part 1).pdf](https://github.com/navya97singhal/Introduction-to-Machine-Learning_STA380/blob/main/Q3%20Visual%20Story%20(Part%201).pdf)
